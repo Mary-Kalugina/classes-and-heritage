@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 import Daemon from '../Daemon';
 import Zombie from '../Zombie';
 import Swordsman from '../Swordsman';
@@ -85,18 +87,18 @@ test('test Undead', () => {
 
 test('test error type', () => {
   expect(() => {
-    new Undead('dasha', 'Und');
+    const result = new Undead('dasha', 'Und');
   }).toThrowError('Wrong type');
 });
 
 test('test error name', () => {
   expect(() => {
-    new Undead('d', 'Undead');
+    const result = new Undead('d', 'Undead');
   }).toThrowError('Wrong name');
 });
 
 test('test error name', () => {
   expect(() => {
-    new Undead('ddddddddddddd', 'Undead');
+    const result = new Undead('ddddddddddddd', 'Undead');
   }).toThrowError('Wrong name');
 });
